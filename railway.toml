@@ -1,15 +1,11 @@
-# Railway TOML Configuration for TaskFlow Monorepo
+# Railway TOML Configuration for TaskFlow Fullstack Monorepo
+# Backend serves both API and frontend static files
 
 [build]
 builder = "nixpacks"
 
 [[services]]
-name = "backend"
+name = "taskflow"
 root = "backend"
-startCommand = "npm start"
-
-[[services]]
-name = "frontend"
-root = "frontend"
 buildCommand = "npm run build"
-startCommand = "npm run preview"
+startCommand = "npm start"
