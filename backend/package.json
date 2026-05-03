@@ -4,11 +4,13 @@
   "description": "Production-ready task management backend",
   "type": "module",
   "main": "src/server.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "build": "cd ../frontend && npm install && npm run build",
-    "postinstall": "cd ../frontend && npm install"
+    "build": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -22,13 +24,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "keywords": [
-    "express",
-    "mongodb",
-    "jwt",
-    "task-management"
-  ],
-  "author": "",
-  "license": "MIT"
+  }
 }
